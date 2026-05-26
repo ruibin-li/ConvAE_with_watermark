@@ -285,6 +285,7 @@ def parse_args():
     p.add_argument("--client-id", type=int, default=0)
     p.add_argument("--num-clients", type=int, default=10)
     p.add_argument("--trigger-size", type=int, default=6)
+    p.add_argument("--trigger-value", type=float, default=0.5)
     p.add_argument("--residual-eps", type=float, default=0.08)
     p.add_argument("--wm-ratio", type=float, default=0.25)
     p.add_argument("--lambda-wm", type=float, default=1.0)
@@ -313,6 +314,7 @@ def main():
         client_id=args.client_id,
         num_clients=args.num_clients,
         trigger_size=args.trigger_size,
+        trigger_value=args.trigger_value,
         residual_eps=args.residual_eps,
         wm_ratio=args.wm_ratio,
         lambda_wm=args.lambda_wm,
